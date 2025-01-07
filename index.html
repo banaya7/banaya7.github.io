@@ -212,10 +212,33 @@ I’m excited to continue my career journey in IT, where I can contribute my ski
     </div>
     <!-- End #education -->
 
-    	<div id="sample">
-       
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collapsible Documentation</title>
+  <style>
+    .collapsible {
+      background-color: #f1f1f1;
+      color: #333;
+      cursor: pointer;
+      padding: 10px 20px;
+      width: 100%;
+      border: none;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-	    
+    .content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" class="collapsible">Show Documentation</button>
+ <div id="sample">    
        <div style="
     text-align: center; 
     font-size: 24px; 
@@ -505,6 +528,24 @@ I’m excited to continue my career journey in IT, where I can contribute my ski
 </div>
 
  <!-- End of sample documentation -->
+    
+  </div>
+
+  <script>
+    const collapsible = document.querySelector('.collapsible');
+    const content = document.querySelector('.content');
+
+    collapsible.addEventListener('click', function () {
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        this.textContent = "Show Documentation";
+      } else {
+        content.style.display = "block";
+        this.textContent = "Hide Documentation";
+      }
+    });
+  </script>
+    	
 	    
 <div id="projects" class="background-alt">
         <h2 class="heading">Projects</h2>
